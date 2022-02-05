@@ -1,0 +1,123 @@
+$main-color: rgb(255, 0, 0);
+// $main-color: rgb(110, 214, 255);
+// $shadow-color: rgb(154, 228, 246);
+// $shadow-color: rgb(0, 238, 255);
+$shadow-color: rgba(233, 71, 71, 0.787);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.wallpapersafari.com/54/49/LTEvra.jpg");
+}
+
+.message-wrapper {
+    font-weight: 900;
+    height: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    color: $main-color;
+    text-shadow: 2px 2px 0 $shadow-color, 
+    2px -2px 0 $shadow-color, 
+    -2px 2px 0 $shadow-color, 
+    -2px -2px 10px $shadow-color, 
+    2px 0px 10px $shadow-color, 
+    0px 2px 10px $shadow-color, 
+    -2px 0px 10px $shadow-color, 
+    0px -2px 10px $shadow-color, 
+    0px 0px 10px $main-color, 
+    0px 0px 10px $main-color, 
+    0px 0px 10px $main-color, 
+    0px 0px 10px $main-color, 
+    0px 0px 10px $main-color;
+
+    .outer-border {
+        background: rgba(124, 183, 250, 0.698);
+        backdrop-filter: blur(10);
+        // border: 1px solid rgba(118, 199, 236, 0.787);
+        box-shadow: -1px 0px 15px 4px $shadow-color, 1px 0px 15px 10px $shadow-color inset;
+        border-radius: 20px;
+        width: 500px;
+        height: 100%;
+        padding-top: 7px;
+
+        button {
+            font-size: 36px;
+            font-weight: 900;
+            border: none;
+            background: #00000000;
+            color: $main-color;
+            text-shadow: 0px 0px 10px $shadow-color;
+            transition: text-shadow 1000ms;
+        }
+
+        .message-title {
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: 5px;
+            margin-left: 25px;
+            margin-right: 25px;
+
+            p {
+                font-size: 42px;
+                font-weight: 600;
+                color: #000;
+            }
+
+            button {
+                border: none;
+                text-shadow: 0px 0px 10px $shadow-color;
+                transition: text-shadow 1000ms;
+            }
+    
+            button:hover {
+                text-shadow: 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color, 0px 0px 20px $shadow-color;
+            }
+        }
+    }
+
+    .message-body {
+        border: 1px solid $main-color;
+        // margin: 10px 18px 10px 25px;
+        margin: 10px 5px 0 5px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: -2px 0px 5px 4px $shadow-color;
+        height: 230px;
+
+        p {
+            font-size: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+
+            i {
+                color: black;
+                margin-right: 25px;
+                font-size: 72px;
+            }
+        }
+        
+        .ok-btn {
+            font-size: 24px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 50px;
+            padding: 0 20px 0 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 1px $shadow-color, 0px 0px 5px 1px $shadow-color inset;
+            border: 5px solid $main-color;
+            transition: box-shadow 1000ms;
+        }
+
+        .ok-btn:hover {
+            box-shadow: 0px 0px 5px 4px $shadow-color, 0px 0px 5px 4px $shadow-color inset;
+        }
+    }
+}
